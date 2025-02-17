@@ -26,7 +26,7 @@ for file_path in list_of_files:
     filepath = Path(file_path)
     filedir,filename = os.path.split(filepath)
 
-    if not os.path.exists(filedir):
+    if filedir and not os.path.exists(filedir):
         os.makedirs(filedir, exist_ok=True)
         logging.info(f'Directory created: {filedir} for the file : {filename}')
     
