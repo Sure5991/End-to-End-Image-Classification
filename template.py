@@ -19,7 +19,8 @@ list_of_files = ['.github/workflows/.gitkeep',
                  'params.yaml',
                  'requirements.txt',
                  'setup.py',
-                 'research/trails.ipynb'
+                 'research/trails.ipynb',
+                 'templates/index.html'
                  ]
 
 for file_path in list_of_files:
