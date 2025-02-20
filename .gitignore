@@ -1,3 +1,9 @@
+# data folder
+artifacts/data_ingestion
+
+# notebooks
+.ipynb_checkpoints/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -5,7 +11,7 @@ __pycache__/
 
 # C extensions
 *.so
-/dataset
+
 # Distribution / packaging
 .Python
 build/

@@ -25,6 +25,17 @@ def read_yaml_file(filepath: Path) -> ConfigBox:
         raise e
 
 @ensure_annotations
+def create_directories(dirpaths:list, verbose = True):
+    """Create directories."""
+    try:
+        for dirpath in dirpaths:
+            os.makedirs(dirpath, exist_ok=True)
+            if verbose:
+                logger.info(f'directory:{dirpath} has been created successfully.')
+    except Exception as e:
+        raise e
+
+@ensure_annotations
 def save_json(filepath:Path ,data:dict):
     """Save a dictionary to a json file."""
     try:

@@ -1,0 +1,9 @@
+artifact_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source: 1HclwA9zvctv5pUZWrwHn70P51OOuYNqy 
+  local_data_file : artifacts/data_ingestion/dog-breed-identification.zip
+  unzip_dir: artifacts/data_ingestion
+
