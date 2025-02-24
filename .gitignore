@@ -1,5 +1,5 @@
 # data folder
-artifacts/data_ingestion
+artifacts/
 
 # notebooks
 .ipynb_checkpoints/

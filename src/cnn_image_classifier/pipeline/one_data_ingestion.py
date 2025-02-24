@@ -20,7 +20,7 @@ if __name__ == '__main__':
         logger.info(f"++++++++Starting {STAGE_NAME} pipeline+++++++++")
         pipeline = Data_Ingestion_Training_Pipeline()
         pipeline.main()
-        logger.info(f"++++++++Completed {STAGE_NAME} pipeline++++++++\n\nx===================x")
+        logger.info(f"++++++++Completed {STAGE_NAME} pipeline+++++++++")
     except Exception as e:
         logger.exception(e)
         raise e
