@@ -1,6 +1,7 @@
 from cnn_image_classifier.constants import *
 from cnn_image_classifier.utils.common import read_yaml_file, create_directories
 from cnn_image_classifier.entity.config_entity import *
+import os
 
 class Config_Manager:
     def __init__(self, config_file_path: Path = config_path, param_file_path: Path = param_path):
@@ -38,7 +39,16 @@ class Config_Manager:
         return prepare_base_model_config
 
 
+    def get_callbacks_config(self)-> Callback_Config:
+        config = self.config.callbacks
+        model_checkpoint_dir = os.path.dirname(config.model_checkpoint_filepath)
+        create_directories([config.tensorboard_dir,model_checkpoint_dir])
+        callback_config = Callback_Config(
+            root_dir = Path(config.root_dir),
+            model_checkpoint = Path(config.model_checkpoint_filepath),
+            tensorboard_dir = Path(config.tensorboard_dir))
 
+        return callback_config
         
 
 

@@ -18,3 +18,9 @@ class BaseModelConfig:
     params_include_top : bool
     params_classes : int
     learning_rate : float
+
+@dataclass(frozen=True)
+class Callback_Config:
+    root_dir: Path
+    model_checkpoint: Path
+    tensorboard_dir: Path

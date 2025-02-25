@@ -22,4 +22,4 @@ if __name__ == '__main__':
         pipeline.main()
         logger.info(f"++++++++++++++ Stage: {STAGE_NAME} pipeline Ended ++++++++++++++")
     except Exception as e:
-        logger.error(e)
+        logger.exception(e)
